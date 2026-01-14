@@ -33,18 +33,6 @@
 
 ---
 
-## 🏗️ Tech Stack
-
-This project is built using modern Flutter best practices:
-
-* **Framework:** [Flutter](https://flutter.dev/) (Dart)
-* **State Management:** [Flutter Riverpod](https://riverpod.dev/) (For robust game state and dependency injection)
-* **Navigation:** [GoRouter](https://pub.dev/packages/go_router) (Declarative routing)
-* **Storage:** [Shared Preferences](https://pub.dev/packages/shared_preferences) (Persisting custom decks and user settings)
-* **UI/UX:** `flutter_animate`, `google_fonts`, `haptic_feedback`
-
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
