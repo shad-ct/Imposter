@@ -6,6 +6,8 @@ import '../screens/reveal_screen.dart';
 import '../screens/gameplay_screen.dart';
 import '../screens/voting_screen.dart';
 import '../screens/game_over_screen.dart';
+import '../screens/game_screen.dart';
+import '../screens/online_menu_screen.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
@@ -45,6 +47,16 @@ final appRouter = GoRouter(
           votedOutPlayer: extra?['votedOutPlayer'],
         );
       },
+    ),
+    GoRoute(
+      path: '/game',
+      name: 'game',
+      builder: (context, state) => const GameScreen(),
+    ),
+    GoRoute(
+      path: '/online-menu',
+      name: 'online-menu',
+      builder: (context, state) => const OnlineMenuScreen(),
     ),
   ],
   errorBuilder: (context, state) => Scaffold(

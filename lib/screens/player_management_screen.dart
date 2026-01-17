@@ -105,6 +105,11 @@ class _PlayerManagementScreenState
       appBar: AppBar(
         title: const Text('IMPOSTER'),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.wifi),
+            tooltip: "Online Mode",
+            onPressed: () => context.push('/online-menu'),
+          ),
           if (players.isNotEmpty)
             IconButton(
               icon: const Icon(Icons.delete_sweep),

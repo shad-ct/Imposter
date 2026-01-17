@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "676571972175",
+    "firebase_url": "https://imposter-aefe2-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "imposter-aefe2",
+    "storage_bucket": "imposter-aefe2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676571972175:android:b939579f353c28da80203a",
+        "android_client_info": {
+          "package_name": "com.imposter.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsbXm2MSm12FDswfJXE1PTF_VEXpnBdTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

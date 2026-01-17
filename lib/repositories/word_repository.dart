@@ -1,6 +1,28 @@
 import '../models/word_pack.dart';
 import '../models/word_pair.dart';
 
+// Helper class for custom packs requiring conversion from raw words to pairs
+class CustomCategoryPack extends WordPack {
+  final List<String> words;
+
+  CustomCategoryPack({required String categoryName, required this.words}) 
+      : super(categoryName: categoryName, pairs: _generatePairs(words));
+
+  static List<WordPair> _generatePairs(List<String> words) {
+    if (words.length < 2) return [];
+    List<WordPair> pairs = [];
+    // Generate all unique pairs
+    for (int i = 0; i < words.length; i++) {
+        for (int j = i + 1; j < words.length; j++) {
+            pairs.add(WordPair(civilian: words[i], imposter: words[j]));
+            pairs.add(WordPair(civilian: words[j], imposter: words[i])); // Add reverse too? Or just one way?
+            // Usually just one is fine, shuffling handles assignment.
+        }
+    }
+    return pairs;
+  }
+}
+
 class WordRepository {
   static const List<WordPack> wordPacks = [
     WordPack(
@@ -233,5 +255,21 @@ class WordRepository {
     final defaultCategories = wordPacks.map((pack) => pack.categoryName).toList();
     final customCategories = customPacks.map((pack) => pack.categoryName).toList();
     return [...defaultCategories, ...customCategories];
+  }
+
+  static List<String> getWordsForCategory(String category, {List<WordPack> customPacks = const []}) {
+    final allPacks = [...wordPacks, ...customPacks];
+    try {
+        final pack = allPacks.firstWhere((p) => p.categoryName == category);
+        // Extract unique words from pairs
+        final words = <String>{};
+        for (var pair in pack.pairs) {
+            words.add(pair.civilian);
+            words.add(pair.imposter);
+        }
+        return words.toList();
+    } catch (e) {
+        return [];
+    }
   }
 }
