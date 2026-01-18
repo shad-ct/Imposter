@@ -1,7 +1,5 @@
 # 🕵️ Imposter: The Social Deduction Party Game
 
-![Flutter](https://img.shields.io/badge/Flutter-3.0%2B-02569B?logo=flutter) ![Dart](https://img.shields.io/badge/Dart-3.0%2B-0175C2?logo=dart) ![License](https://img.shields.io/badge/License-MIT-green) ![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-lightgrey)
-
 **Imposter** is an offline, pass-and-play party game built with Flutter. Inspired by classics like *Spyfall* and *The Chameleon*, it challenges players to blend in, deduce roles, and survive the vote.
 
 
@@ -32,42 +30,3 @@
 * **Player Management:** Drag-and-drop to reorder players for the "Pass" cycle.
 
 ---
-
-## 🚀 Getting Started
-
-### Prerequisites
-* Flutter SDK (v3.0 or later)
-* Dart SDK
-* Android Studio / VS Code
-
-### Installation
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/yourusername/imposter-game.git](https://github.com/shad-ct/Imposter/)
-    cd imposter-game
-    ```
-
-2.  **Install dependencies:**
-    ```bash
-    flutter pub get
-    ```
-
-3.  **Run the app:**
-    ```bash
-    # For debug mode
-    flutter run
-
-    # To build an APK
-    flutter build apk --release
-    ```
-
----
-
-## 📂 Project Structure
-
-```bash
-lib/
-├── models/         # Data classes (Player, WordPack, WordPair)
-├── providers/      # Riverpod notifiers (GameLogic, Settings, PlayerList)
-├── repositories/   # Data fetching (Local storage, Default word
