@@ -1,5 +1,6 @@
 # 🕵️ Imposter: The Social Deduction Party Game
 
+---
 ![Flutter](https://img.shields.io/badge/Flutter-3.0%2B-02569B?logo=flutter) ![Dart](https://img.shields.io/badge/Dart-3.0%2B-0175C2?logo=dart) ![License](https://img.shields.io/badge/License-MIT-green) ![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-lightgrey)
 
 **Imposter** is an offline, pass-and-play party game built with Flutter. Inspired by classics like *Spyfall* and *The Chameleon*, it challenges players to blend in, deduce roles, and survive the vote.
